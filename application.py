@@ -7,7 +7,7 @@ app = Flask(__name__)
 # The function must container a decorator that specifies the url on which to launch the output
 @app.route("/")
 def hello_world():
-    return "hello world"
+    return "<h1>hello world</h1>"
 
 # Create a new function that recommends movies to a user
 # The path (url) shall be "/recommender"
