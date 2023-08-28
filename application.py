@@ -9,6 +9,13 @@ app = Flask(__name__)
 def hello_world():
     return "hello world"
 
+# Create a new function that recommends movies to a user
+# The path (url) shall be "/recommender"
+@app.route("/recommender")
+def recommend_movies():
+    some_movies = ["movie1", "movie2", "movie3"]
+    return f'{some_movies}'
+
 # We can start our server locally.
 # To make sure the server is launched only when this script
 # is run directly (and not through another script):
