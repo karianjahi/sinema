@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 # Let us tell flask that this is the script that launches the project
 app = Flask(__name__)
@@ -6,8 +6,8 @@ app = Flask(__name__)
 # Create a function that says hello world on the browser
 # The function must container a decorator that specifies the url on which to launch the output
 @app.route("/")
-def hello_world():
-    return "<h1>hello world</h1>"
+def index():
+    return render_template("index.html")
 
 # Create a new function that recommends movies to a user
 # The path (url) shall be "/recommender"
