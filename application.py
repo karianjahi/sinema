@@ -14,7 +14,14 @@ def hello_world():
 @app.route("/recommender")
 def recommend_movies():
     some_movies = ["movie1", "movie2", "movie3"]
-    return f'{some_movies}'
+    return f'''<title>recommendations</title>
+                <h1>The following movies are recommended</h1>
+                <ol>
+                    <li>{some_movies[0]}</li>
+                    <li>{some_movies[1]}</li>
+                    <li>{some_movies[2]}</li>
+                </ol>
+            '''
 
 # We can start our server locally.
 # To make sure the server is launched only when this script
