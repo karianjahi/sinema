@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from simple_recommender import recommend_movies
 
 # Let us tell flask that this is the script that launches the project
@@ -14,7 +14,8 @@ def index():
 # The path (url) shall be "/recommender"
 @app.route("/recommender")
 def recommendations():
-    user_input = ""
+    user_input = dict(request.args)
+    print(user_input)
     movies = recommend_movies(user_input)
     return render_template("recommendations.html", movies=movies)
 
