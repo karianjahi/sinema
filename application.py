@@ -13,7 +13,7 @@ def index():
 # The path (url) shall be "/recommender"
 @app.route("/recommender")
 def recommend_movies():
-    random_movies = ["movie1", "movie2", "movie3"]
+    random_movies = ["movie1", "movie2", "movie3", "movie4"]
     return render_template("recommendations.html", movies=random_movies)
 
 # We can start our server locally.

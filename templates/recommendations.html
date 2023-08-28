@@ -9,9 +9,9 @@
 <body>
     <h1>The following movies are recommended for you</h1>
     <ol>
-        <li>{{movies[0]}}</li>
-        <li>{{movies[1]}}</li>
-        <li>{{movies[2]}}</li>
+        {% for movie in movies %}
+        <li>{{movie}}</li>
+        {% endfor %}
     </ol>
     <a href="/">Go to home page</a>
 </body>
